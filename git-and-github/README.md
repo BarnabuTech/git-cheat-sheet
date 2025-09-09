@@ -15,12 +15,19 @@ Version control is a system that records changes to files over time so you can r
 
 ### Setting Up
 
+Configuration user information used across all local repositories.
+
 ```bash
 git config --global user.name "Your Name"
+# Set a name that is identifiable for credit when review version history.
+
 git config --global user.email "your.email@example.com"
+# Set an Email address that will be associated with each history marker.
 ```
 
-### Starting a Repository
+### Setup and INIT
+
+Configuring user information, initializing and cloning repositories.
 
 ```bash
 # Initialize a new Git repository
@@ -30,7 +37,9 @@ git init
 git clone <repository-url>
 ```
 
-### Making Changes
+### Stage and Snapshot
+
+Working with snapshots and the Git staging area.
 
 ```bash
 # Check status of working directory
@@ -38,40 +47,24 @@ git status
 
 # Add files to staging area
 git add <file>     # Add specific file
-git add .          # Add all changes
+git add .          # Adding all changes
+
+# Unstage a file while retaining the changes in working directory.
+git reset <file>         
+
+# Diff of what is changed but not staged.
+git diff
+
+# Diff of what is staged but not yet commited.
+git diff --staged
 
 # Commit changes with a message
 git commit -m "Descriptive message about changes"
 ```
 
-### Working with Branches
+### Add Other Basic Git Commands
 
-```bash
-# Create and switch to a new branch
-git checkout -b feature-branch
-
-# List all branches
-git branch
-
-# Switch between branches
-git checkout branch-name
-
-# Merge branches
-git merge branch-name
-```
-
-### Working with Remote Repositories
-
-```bash
-# Add a remote repository
-git remote add origin <repository-url>
-
-# Push changes to remote
-git push -u origin main
-
-# Pull latest changes
-git pull origin main
-```
+Check the repository issue tab and add any of yours as from here.
 
 ## GitHub Basics
 
